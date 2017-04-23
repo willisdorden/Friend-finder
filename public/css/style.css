@@ -24,3 +24,28 @@ body {
     line-height: 1.8;
     word-spacing: 5px;
 }
+#title{
+    color: crimson;
+    font-family: 'Nobile', Helvetica, Arial, sans-serif;
+    text-shadow: 1px 1px 1px #ccc;
+    letter-spacing: 3px;
+    line-height: 3;
+    word-spacing: 5px;
+    font-size: x-large;
+
+}
+#questions{
+    color: black;
+    font-family: 'Nobile', Helvetica, Arial, sans-serif;
+    text-shadow: 1px 1px 1px #ccc;
+    letter-spacing: 3px;
+    line-height: 2;
+    word-spacing: 5px;
+    font-size: large;
+}
+#surveysubmit{
+    margin-left:100px;
+}
+#music{
+    float: right;
+}
