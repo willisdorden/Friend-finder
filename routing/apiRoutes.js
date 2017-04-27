@@ -11,7 +11,8 @@ app.get('/api/friends', function(req, res){
 
 app.post('/api/date',function(req,res){
     var newFriend = req.body;
-    var closestMatch;
+    var diffArry =[];
+
     for (var i = 0; i < friend.length; i++) {
         var friendScoreArry = friend[i].score;
         var diff = 0;
@@ -19,12 +20,20 @@ app.post('/api/date',function(req,res){
             var friendScore = parseInt(friendScoreArry[j]);
             var newFriendScore = parseInt(newFriend.score[j]);
                 diff += Math.abs(friendScore - newFriendScore);
+              // var match = Math.min(diff);
+            //if(friendScore === match){
+              //     console.log(this.friend);
+            //}
         }
-        console.log(diff);
+        diffArry.push(diff);
     }
-
-
+    var lowestScore = Math.min.apply(null,diffArry);
+    console.log(lowestScore +"hi");
+    var indexofFriend = diffArry.indexOf(lowestScore);
+   var bestMatch= friend[indexofFriend];
+   console.log(bestMatch);
     friend.push(newFriend);
+    res.json(bestMatch);
 
 });
 };
