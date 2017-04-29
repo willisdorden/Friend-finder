@@ -4,7 +4,7 @@ var path = require("path");
 
 //telling node to use express
 var app = express();
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'))
 //telling node to use the port number
 var PORT = 3000;
 
