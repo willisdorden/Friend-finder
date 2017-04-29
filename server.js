@@ -6,7 +6,7 @@ var path = require("path");
 var app = express();
 app.use(express.static(path.join(__dirname, 'public')));
 //telling node to use the port number
-var PORT = 3000;
+var PORT = process.env.PORT || 3000;
 
 // BodyParser makes it possible for our server to interpret data sent to it.
 // Add the standard 4 lines of code to use bodyParser as middleware
