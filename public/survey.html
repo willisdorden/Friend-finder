@@ -263,7 +263,7 @@
         $.post('/api/date', newFriend)
             .done(function(data) {
                 console.log(data);
-                alert("friend added...");
+                alert("your best match is " + data.name);
             });
     });
 </script>
